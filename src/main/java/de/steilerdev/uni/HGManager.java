@@ -16,6 +16,7 @@
  */
 package de.steilerdev.uni;
 
+import de.steilerdev.uni.Connections.HasPublished;
 import de.steilerdev.uni.Connections.HasWritten;
 import de.steilerdev.uni.model.Author;
 import de.steilerdev.uni.model.Book;
@@ -76,6 +77,38 @@ public class HGManager extends HGEnvironment
 
         // Linking author to books
         System.out.println("###### Linking books and authors...");
-        HasWritten
+        graph.add(new HasWritten(1925, fScottFitzgerald, derGrosseGatsby));
+        graph.add(new HasWritten(1934, fScottFitzgerald, zaertlichIstDieNacht));
+        graph.add(new HasWritten(1931, aldousHuxley, schoeneNeueWelt));
+        graph.add(new HasWritten(1957, maxFrisch, homoFaber));
+        graph.add(new HasWritten(1975, maxFrisch, montauk));
+        graph.add(new HasWritten(1951, ernestHemingway, derAlteMannUndDasMeer));
+        graph.add(new HasWritten(1950, ernestHemingway, ueberDenFlussUndInDieWaelder));
+        graph.add(new HasWritten(1979, douglasAdams, perAnhalterDurchDieGalaxis));
+        graph.add(new HasWritten(1980, douglasAdams, dasRestaurantAmEndeDesUniversums));
+        graph.add(new HasWritten(1982, douglasAdams, dasLebenDasUniversumUndDerGanzeRest));
+        graph.add(new HasWritten(1922, hermannHesse, siddhartha));
+        graph.add(new HasWritten(1927, hermannHesse, derSteppenwolf));
+
+        // Linking publisher to books
+        System.out.println("###### Linking publisher and books");
+        graph.add(new HasPublished(diogenes, derGrosseGatsby));
+        graph.add(new HasPublished(reclam, derGrosseGatsby));
+        graph.add(new HasPublished(diogenes, zaertlichIstDieNacht));
+        graph.add(new HasPublished(dtv, zaertlichIstDieNacht));
+        graph.add(new HasPublished(fischer, schoeneNeueWelt));
+        graph.add(new HasPublished(suhrkamp, homoFaber));
+        graph.add(new HasPublished(suhrkamp, montauk));
+        graph.add(new HasPublished(rowohlt, derAlteMannUndDasMeer));
+        graph.add(new HasPublished(rowohlt, ueberDenFlussUndInDieWaelder));
+        graph.add(new HasPublished(heyne, perAnhalterDurchDieGalaxis));
+        graph.add(new HasPublished(heyne, dasRestaurantAmEndeDesUniversums));
+        graph.add(new HasPublished(heyne, dasLebenDasUniversumUndDerGanzeRest));
+        graph.add(new HasPublished(suhrkamp, derSteppenwolf));
+        graph.add(new HasPublished(suhrkamp, siddhartha));
+        graph.add(new HasPublished(rowohlt, siddhartha));
+
+        System.out.println("Finished building database");
+        graph.close();
     }
 }

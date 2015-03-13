@@ -20,6 +20,8 @@ public class Publisher
 {
     private String name;
 
+    public Publisher() {}
+
     public Publisher(String name)
     {
         this.name = name;

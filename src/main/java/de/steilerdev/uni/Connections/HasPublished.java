@@ -14,26 +14,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.steilerdev.uni.model;
+package de.steilerdev.uni.Connections;
 
-public class Book
+import org.hypergraphdb.HGHandle;
+import org.hypergraphdb.HGPlainLink;
+import org.hypergraphdb.HGValueLink;
+import org.hypergraphdb.atom.HGRel;
+
+public class HasPublished extends HGPlainLink
 {
-    private String title;
+    private String name;
 
-    public Book() {}
-
-    public Book(String title)
+    public HasPublished(HGHandle... targetSet)
     {
-        this.title = title;
+        super(targetSet);
+        this.name = "HasPublished";
     }
 
-    public String getTitle()
+    public HasPublished() {}
+
+    public String getName()
     {
-        return title;
+        return name;
     }
 
-    public void setTitle(String title)
+    public void setName(String name)
     {
-        this.title = title;
+        this.name = name;
     }
 }

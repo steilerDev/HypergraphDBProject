@@ -1,1 +1,7 @@
-HGDBSample.class
+de/steilerdev/uni/model/Publisher.class
+de/steilerdev/uni/model/Author.class
+de/steilerdev/uni/model/Book.class
+de/steilerdev/uni/Connections/HasWritten.class
+de/steilerdev/uni/Connections/HasPublished.class
+de/steilerdev/uni/HGDBSample.class
+de/steilerdev/uni/HGManager.class

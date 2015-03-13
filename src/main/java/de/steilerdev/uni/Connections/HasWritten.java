@@ -17,16 +17,32 @@
 package de.steilerdev.uni.Connections;
 
 import org.hypergraphdb.HGHandle;
+import org.hypergraphdb.HGPlainLink;
 import org.hypergraphdb.atom.HGRel;
 
-public class HasWritten extends HGRel
+public class HasWritten extends HGPlainLink
 {
     private int year;
 
-    public HasWritten(String name, int year, HGHandle... targetSet)
+    private String name;
+
+    public HasWritten() {}
+
+    public HasWritten(int year, HGHandle... outgoingSet)
     {
-        super(name, targetSet);
+        super(outgoingSet);
         this.year = year;
+        this.name = "HasWritten";
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
     }
 
     public int getYear()

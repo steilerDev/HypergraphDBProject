@@ -25,18 +25,6 @@ public class HGDBSample
 
         HyperGraph graph = HGManager.get();
 
-        try
-        {
-            graph = new HyperGraph(databaseLocation);
-        }
-        catch (Throwable t)
-        {
-            t.printStackTrace();
-        }
-        finally
-        {
-            if(graph != null)
-                graph.close();
-        }
+        //Do stuff
     }
 }

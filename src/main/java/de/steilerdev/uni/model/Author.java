@@ -22,6 +22,8 @@ public class Author
     private String firstName;
     private String stageName;
 
+    public Author() {}
+
     public Author(String name, String firstName, String stageName)
     {
         this.name = name;
