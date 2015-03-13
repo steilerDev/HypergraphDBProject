@@ -18,8 +18,6 @@ package de.steilerdev.uni.Connections;
 
 import org.hypergraphdb.HGHandle;
 import org.hypergraphdb.HGPlainLink;
-import org.hypergraphdb.HGValueLink;
-import org.hypergraphdb.atom.HGRel;
 
 public class HasPublished extends HGPlainLink
 {
@@ -30,8 +28,6 @@ public class HasPublished extends HGPlainLink
         super(targetSet);
         this.name = "HasPublished";
     }
-
-    public HasPublished() {}
 
     public String getName()
     {

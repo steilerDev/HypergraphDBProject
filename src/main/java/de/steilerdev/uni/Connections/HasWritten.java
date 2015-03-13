@@ -18,7 +18,6 @@ package de.steilerdev.uni.Connections;
 
 import org.hypergraphdb.HGHandle;
 import org.hypergraphdb.HGPlainLink;
-import org.hypergraphdb.atom.HGRel;
 
 public class HasWritten extends HGPlainLink
 {
@@ -26,7 +25,10 @@ public class HasWritten extends HGPlainLink
 
     private String name;
 
-    public HasWritten() {}
+    public HasWritten(HGHandle... outgoingSet)
+    {
+        super(outgoingSet);
+    }
 
     public HasWritten(int year, HGHandle... outgoingSet)
     {

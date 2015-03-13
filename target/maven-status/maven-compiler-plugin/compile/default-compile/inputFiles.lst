@@ -1,1 +1,7 @@
-/Users/FrankSteiler/Documents/Ausbildung/Uni/6. Semester/Database Implementation/src/main/java/HGDBSample.java
+/Users/FrankSteiler/Documents/Ausbildung/Uni/6. Semester/Database Implementation/HypergraphProject/src/main/java/de/steilerdev/uni/HGManager.java
+/Users/FrankSteiler/Documents/Ausbildung/Uni/6. Semester/Database Implementation/HypergraphProject/src/main/java/de/steilerdev/uni/Connections/HasPublished.java
+/Users/FrankSteiler/Documents/Ausbildung/Uni/6. Semester/Database Implementation/HypergraphProject/src/main/java/de/steilerdev/uni/Connections/HasWritten.java
+/Users/FrankSteiler/Documents/Ausbildung/Uni/6. Semester/Database Implementation/HypergraphProject/src/main/java/de/steilerdev/uni/HGDBSample.java
+/Users/FrankSteiler/Documents/Ausbildung/Uni/6. Semester/Database Implementation/HypergraphProject/src/main/java/de/steilerdev/uni/model/Publisher.java
+/Users/FrankSteiler/Documents/Ausbildung/Uni/6. Semester/Database Implementation/HypergraphProject/src/main/java/de/steilerdev/uni/model/Book.java
+/Users/FrankSteiler/Documents/Ausbildung/Uni/6. Semester/Database Implementation/HypergraphProject/src/main/java/de/steilerdev/uni/model/Author.java
