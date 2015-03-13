@@ -1,0 +1,8 @@
+org.hypergraphdb.peer
+org.hypergraphdb.peer.bootstrap
+org.hypergraphdb.peer.cact
+org.hypergraphdb.peer.log
+org.hypergraphdb.peer.replication
+org.hypergraphdb.peer.serializer
+org.hypergraphdb.peer.workflow
+org.hypergraphdb.peer.xmpp

@@ -1,0 +1,64 @@
+ CREATE (derGrosseGatsby:Book { title : 'Der große Gatby'})
+CREATE (zaertlichIstDieNacht:Book { title : 'Zärtlich ist die Nacht'})
+CREATE (schoeneNeueWelt:Book { title : 'Schöne neue Welt'})
+CREATE (homoFaber:Book { title : 'Homo Faber'})
+CREATE (montauk:Book { title : 'Montauk'})
+CREATE (derAlteMannUndDasMeer:Book { title : 'Der alte Mann und das Meer'})
+CREATE (ueberDenFlussUndInDieWaelder:Book { title : 'Über den Fluss und in die Wälder'})
+CREATE (perAnhalterDurchDieGalaxis:Book { title : 'Per Anhalter durch die Galaxis'})
+CREATE (dasRestaurantAmEndeDesUniversums:Book { title : 'Das Restaurant am Ende des Universums'})
+CREATE (dasLebenDasUniversumUndDerGanzeRest:Book { title : 'Das Leben, das Universum und der ganze Rest'})
+CREATE (derSteppenwolf:Book { title : 'Der Steppenwolf'})
+CREATE (siddhartha:Book { title : 'Siddhartha'})
+
+
+
+CREATE (fScottFitzgerald:Author { name : 'Fitzgerald', firstname : 'Francis Scott Key', stagename : 'F. Scott Fitzgerald'})
+CREATE (aldousHuxley:Author { name : 'Huxley', firstname : 'Aldous Leonard', stagename : 'Aldous Huxley'})
+CREATE (maxFrisch:Author { name : 'Frisch', firstname : 'Max Rudolf', stagename : 'Max Frisch'})
+CREATE (ernestHemingway:Author { name : 'Hemingway', firstname : 'Ernest Miller', stagename : 'Ernest Hemingway'})
+CREATE (douglasAdams:Author { name : 'Adams', firstname : 'Douglas Noël', stagename : 'Douglas Adams'})
+CREATE (hermannHesse:Author { name : 'Hesse', firstname : 'Hermann Karl', stagename : 'Hermann Hesse'})
+
+
+
+CREATE (suhrkamp:Publisher { name : 'Suhrkamp'})
+CREATE (fischer:Publisher { name : 'Fischer Verlag'})
+CREATE (reclam:Publisher { name : 'Reclam'})
+CREATE (diogenes:Publisher { name : 'Diogenes'})
+CREATE (dtv:Publisher { name : 'dtv'})
+CREATE (rowohlt:Publisher { name : 'Rowohlt'})
+CREATE (heyne:Publisher { name : 'Heyne'})
+
+
+
+CREATE (fScottFitzgerald)-[:HAS_WRITTEN { year : '1925'}]->(derGrosseGatsby)
+CREATE (fScottFitzgerald)-[:HAS_WRITTEN { year : '1934'}]->(zaertlichIstDieNacht)
+CREATE (aldousHuxley)-[:HAS_WRITTEN { year : '1931'}]->(schoeneNeueWelt)
+CREATE (maxFrisch)-[:HAS_WRITTEN { year : '1957'}]->(homoFaber)
+CREATE (maxFrisch)-[:HAS_WRITTEN { year : '1975'}]->(montauk)
+CREATE (ernestHemingway)-[:HAS_WRITTEN { year : '1951'}]->(derAlteMannUndDasMeer)
+CREATE (ernestHemingway)-[:HAS_WRITTEN { year : '1950'}]->(ueberDenFlussUndInDieWaelder)
+CREATE (douglasAdams)-[:HAS_WRITTEN { year : '1979'}]->(perAnhalterDurchDieGalaxis)
+CREATE (douglasAdams)-[:HAS_WRITTEN { year : '1980'}]->(dasRestaurantAmEndeDesUniversums)
+CREATE (douglasAdams)-[:HAS_WRITTEN { year : '1982'}]->(dasLebenDasUniversumUndDerGanzeRest)
+CREATE (hermannHesse)-[:HAS_WRITTEN { year : '1922'}]->(siddhartha)
+CREATE (hermannHesse)-[:HAS_WRITTEN { year : '1927'}]->(derSteppenwolf)
+
+
+
+CREATE (diogenes)-[:HAS_PUBLISHED]->(derGrosseGatsby)
+CREATE (reclam)-[:HAS_PUBLISHED]->(derGrosseGatsby)
+CREATE (diogenes)-[:HAS_PUBLISHED]->(zaertlichIstDieNacht)
+CREATE (dtv)-[:HAS_PUBLISHED]->(zaertlichIstDieNacht)
+CREATE (fischer)-[:HAS_PUBLISHED]->(schoeneNeueWelt)
+CREATE (suhrkamp)-[:HAS_PUBLISHED]->(homoFaber)
+CREATE (suhrkamp)-[:HAS_PUBLISHED]->(montauk)
+CREATE (rowohlt)-[:HAS_PUBLISHED]->(derAlteMannUndDasMeer)
+CREATE (rowohlt)-[:HAS_PUBLISHED]->(ueberDenFlussUndInDieWaelder)
+CREATE (heyne)-[:HAS_PUBLISHED]->(perAnhalterDurchDieGalaxis)
+CREATE (heyne)-[:HAS_PUBLISHED]->(dasRestaurantAmEndeDesUniversums)
+CREATE (heyne)-[:HAS_PUBLISHED]->(dasLebenDasUniversumUndDerGanzeRest)
+CREATE (suhrkamp)-[:HAS_PUBLISHED]->(derSteppenwolf)
+CREATE (suhrkamp)-[:HAS_PUBLISHED]->(siddhartha)
+CREATE (rowohlt)-[:HAS_PUBLISHED]->(siddhartha)
