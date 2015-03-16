@@ -108,20 +108,22 @@ public class HGManager extends HGEnvironment
 
         // Linking publisher to books
         System.out.println("###### Linking publisher and books");
+        graph.add(new HasPublished(suhrkamp, homoFaber, montauk, derSteppenwolf, siddhartha));
+//        graph.add(new HasPublished(suhrkamp, homoFaber));
+//        graph.add(new HasPublished(suhrkamp, montauk));
+//        graph.add(new HasPublished(suhrkamp, derSteppenwolf));
+//        graph.add(new HasPublished(suhrkamp, siddhartha));
+
         graph.add(new HasPublished(diogenes, derGrosseGatsby));
         graph.add(new HasPublished(reclam, derGrosseGatsby));
         graph.add(new HasPublished(diogenes, zaertlichIstDieNacht));
         graph.add(new HasPublished(dtv, zaertlichIstDieNacht));
         graph.add(new HasPublished(fischer, schoeneNeueWelt));
-        graph.add(new HasPublished(suhrkamp, homoFaber));
-        graph.add(new HasPublished(suhrkamp, montauk));
         graph.add(new HasPublished(rowohlt, derAlteMannUndDasMeer));
         graph.add(new HasPublished(rowohlt, ueberDenFlussUndInDieWaelder));
         graph.add(new HasPublished(heyne, perAnhalterDurchDieGalaxis));
         graph.add(new HasPublished(heyne, dasRestaurantAmEndeDesUniversums));
         graph.add(new HasPublished(heyne, dasLebenDasUniversumUndDerGanzeRest));
-        graph.add(new HasPublished(suhrkamp, derSteppenwolf));
-        graph.add(new HasPublished(suhrkamp, siddhartha));
         graph.add(new HasPublished(rowohlt, siddhartha));
 
         System.out.println("Finished building database");
