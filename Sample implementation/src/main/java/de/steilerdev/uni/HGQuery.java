@@ -22,7 +22,6 @@ import de.steilerdev.uni.model.Author;
 import de.steilerdev.uni.model.Book;
 import de.steilerdev.uni.model.Publisher;
 import org.hypergraphdb.HGHandle;
-import org.hypergraphdb.HGLink;
 import org.hypergraphdb.HGSearchResult;
 import org.hypergraphdb.HyperGraph;
 import org.hypergraphdb.algorithms.*;
@@ -42,6 +41,11 @@ public class HGQuery
         this.graph = graph;
     }
 
+    /**
+     * This function tries to find a book based on the provided book title using standard query API of HypergraphDB.
+     * @param bookTitle The title of the searched book.
+     * @return A list with all books matching the title (In general this list should not be bigger than one item).
+     */
     public List<Book> findBookByTitleStandardQuery(String bookTitle)
     {
         System.out.println("Searching for books with title " + bookTitle);
@@ -75,6 +79,11 @@ public class HGQuery
         return resultSet;
     }
 
+    /**
+     * This function tries to find a book based on the provided book title using the namespace queries.
+     * @param bookTitle The title of the searched book.
+     * @return A list with all books matching the title (In general this list should not be bigger than one item).
+     */
     public List<Book> findBookByTitleNamespaceQuery(String bookTitle)
     {
         System.out.println("Searching for books with title " + bookTitle + " using namespace queries");
@@ -95,6 +104,11 @@ public class HGQuery
         return resultSet;
     }
 
+    /**
+     * This function tries to find a publisher based on the provided publisher name.
+     * @param publisherName The name of the searched publisher.
+     * @return A list with all publisher matching the name (In general this list should not be bigger than one item).
+     */
     public List<Publisher> findPublisherByName(String publisherName)
     {
         System.out.println("Searching for publisher with name " + publisherName + " using namespace queries");
@@ -115,7 +129,11 @@ public class HGQuery
         return resultSet;
     }
 
-
+    /**
+     * This function traverses the graph using a breadth first search algorithm to find the author of the provided book.
+     * @param book The book used as entry point for the graph traversal.
+     * @return A list of all authors directly connected to the provided book.
+     */
     public List<Author> findAuthorByBook(Book book)
     {
         System.out.println("Searching for the author of the book " + book.toString());
@@ -146,6 +164,11 @@ public class HGQuery
         return resultSet;
     }
 
+    /**
+     * This function traverses the graph using a breadth first search algorithm to find all authors, who have written a book published by the stated publisher.
+     * @param publisher The publisher used as entry point for the graph traversal.
+     * @return A list of all authors, indirectly connected to the publisher.
+     */
     public List<Author> findAuthorByPublisher(Publisher publisher)
     {
         System.out.println("Searching for the authors published by " + publisher.toString());

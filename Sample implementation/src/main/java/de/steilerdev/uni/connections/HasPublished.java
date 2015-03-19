@@ -19,6 +19,9 @@ package de.steilerdev.uni.connections;
 import org.hypergraphdb.HGHandle;
 import org.hypergraphdb.HGPlainLink;
 
+/**
+ * This class represents a connection between a book and a publisher.
+ */
 public class HasPublished extends HGPlainLink
 {
     private String name;

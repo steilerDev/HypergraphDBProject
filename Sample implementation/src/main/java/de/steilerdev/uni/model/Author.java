@@ -16,6 +16,9 @@
  */
 package de.steilerdev.uni.model;
 
+/**
+ * This class represents an author within the graph
+ */
 public class Author
 {
     private String name;

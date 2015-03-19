@@ -16,6 +16,9 @@
  */
 package de.steilerdev.uni.model;
 
+/**
+ * This class represents a book within the graph
+ */
 public class Book
 {
     private String title;

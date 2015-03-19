@@ -16,6 +16,9 @@
  */
 package de.steilerdev.uni.model;
 
+/**
+ * This class represents a publisher within the graph.
+ */
 public class Publisher
 {
     private String name;

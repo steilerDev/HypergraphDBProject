@@ -15,7 +15,6 @@ package de.steilerdev.uni; /**
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import de.steilerdev.uni.model.Author;
 import de.steilerdev.uni.model.Book;
 import de.steilerdev.uni.model.Publisher;
 import org.hypergraphdb.*;
@@ -24,6 +23,10 @@ import java.util.List;
 
 public class Main
 {
+    /**
+     * The main function executes a test program showing the possibilities of HypergraphDB
+     * @param args This argument is ignored.
+     */
     public static void main(String[] args)
     {
         System.out.println("=========================================");

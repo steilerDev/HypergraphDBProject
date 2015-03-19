@@ -19,6 +19,10 @@ package de.steilerdev.uni.connections;
 import org.hypergraphdb.HGHandle;
 import org.hypergraphdb.HGPlainLink;
 
+/**
+ * This class represents the connection between an author and book.
+ * The edge contains a payload, defining the year the author wrote the book.
+ */
 public class HasWritten extends HGPlainLink
 {
     private int year;
